@@ -1,0 +1,490 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+body{
+    position: relative;
+}
+#root{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1ffr;
+    grid-template-rows: 60px 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: #e9e9e9;
+}
+#root > *{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+.logo{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header>.logo span{
+    font-family: "Showcard Gothic";
+    font-size: 25px;
+}
+header>.logo span:nth-child(1){
+    color: #ffd900;
+}
+header>.logo span:nth-child(2){
+    color: #1a6375;
+}
+header>.accueil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+header>.accueil>a{
+    text-decoration: none;
+    color: white;
+    background-color: #1a6375;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 15px;
+    border-radius: 5px;
+    transition: .3s;
+}
+header>.accueil>a:hover{
+    background-color: #154450;
+}
+header>.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #154450;
+    flex: 1;
+}
+header>.icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0 20px;
+    color: #1a6375;
+}
+.icons>i{   
+    cursor: pointer;
+}
+.search{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search>form{
+    display: flex;
+    gap: 10px;
+}
+.select>select{
+    padding: 4px;
+    outline: 0;
+    border: 1px solid #1a6375;
+    cursor: pointer;
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.searchbar>button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    z-index: 5;
+    cursor: pointer;
+    color: #1a6375;
+}
+.searchbar button:nth-child(1){
+    left: 5px;
+}
+#reset{
+    right: 7px;
+    display: none;
+}
+.searchbar>input{
+    padding: 5px 22px;
+    outline: 0;
+    border: 1px solid #1a6375;
+    
+}
+.searchbar>input:focus{
+    box-shadow: 0px 0px 5px #1a6375;
+}
+
+/* section produits  */
+main{
+    display: flex;
+    padding: 16px;
+    gap: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: auto;
+    position: relative;
+}
+.card{
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid #18637062;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.card>.titre{
+    height: 20%;
+}
+.card>.image{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card>.image>img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.au-panier{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #154450;
+}
+.au-panier .notif_rouge{
+    background-color: red;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    z-index: 10;
+}
+.infos{
+    display: flex;
+    /* height: 30%; */
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 7px;
+    flex: 1;
+}
+.infos>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.infos>h2{
+    color: #1a6375;
+}
+#stock, #prix{
+    
+    color: #0f3741;
+    font-weight: bold;
+}
+#stock span{
+    margin-left: 5px;
+}
+.infos>button{
+    height: 30px;
+    background-color: #ffd900;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+.infos>button:hover{
+    background-color: #c4ad2d;
+}
+.panier{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 7px;
+    max-width: 70%;
+    max-height: 90%;
+    overflow: hidden;
+}
+.table-panier{
+    height: 80%;
+    overflow: scroll;
+}
+.panier table thead{
+    margin: 0;
+}
+.panier table thead th:nth-child(1){
+    text-align: start;
+}
+.panier table tbody tr{
+    height: 60%;
+}
+.panier table tbody tr td:nth-child(1){
+    width: 50%;
+}
+.produit_panier{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-gap: 20px;
+}
+.produit_panier img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    grid-row: 1/-1;
+}
+.produit_panier div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.produit_panier div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.suppr_produit_panier{
+    text-align: center;
+}
+.nbr_produit>input{
+    width: 50px;
+    outline: 0;
+    border: 0;
+    padding: 5px;
+    text-align: end;
+}
+.prix-total{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.prix-total > button{
+    background-color: #1a6375;
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.prix-total > button:hover{
+    background-color: #0f3741;
+}
+.achat-valide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 0;
+    gap: 20px;
+    border-radius: 10px;
+}
+.achat-valide button{
+    background-color: #1a6375;
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.achat-valide button:hover{
+    background-color: #0f3741;
+}
+.panier table{
+    width: 100%;
+
+    border-collapse: collapse;
+    font-size: 17px;
+    text-align: left;
+    position: relative;
+    overflow: auto;
+    max-height: 250px;
+}
+.panier table thead{
+    position: sticky;
+    top: 0;
+    background-color: #1a6375;
+    color: white;
+}
+.panier table th, .panier table td{
+    padding: 12px 15px;
+    border: 0;
+}
+.panier table td{
+    border-bottom: 1px solid #279fbd;
+}
+
+.panier table th{
+    font-weight: bold;
+    text-align: center;
+}
+.panier table tbody i{
+    color: crimson;
+    cursor: pointer;
+    transition: .3s;
+}
+.quantite-prix{
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    gap: 20px;
+    height: 100%;
+}
+.quantite-prix span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#quantite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+#quantite button{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+}
+#quantite button:nth-child(1){
+    background-color: #ffd900;
+    color: black;
+}
+#quantite button:nth-child(3){
+    background-color: #1a6375;
+    color: white;
+}
+.panier table tbody i:hover{
+    color: rgb(121, 15, 36);
+}
+#table_prix{
+    text-align: end;
+}
+.confirm-suppr{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+.confirm-suppr >div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.confirm-suppr>div>button{
+    padding: 10px;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#oui{
+    background-color: crimson;
+}
+#oui:hover{
+    background-color: rgb(126, 21, 42);
+}
+#non{
+    background-color: #1a6375;
+}
+#non:hover{
+    background-color: #113a44;
+}
+.notif{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+}
+.notif button{
+    background-color: #1a6375;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    padding: 10px;
+}
+.notif button:hover{
+    background-color: #0f3741;
+}
+.disabled{
+    background-color: rgb(189, 189, 189) !important;
+    color: gray !important;
+    cursor:not-allowed !important;
+}
+.not-found{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+}
+.not-found button{
+    background-color: #1a6375;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+#visible{
+    right: 7px;
+}

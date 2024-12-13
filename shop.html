@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/shop.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <title>Boutique</title>
+</head>
+<body>
+    
+<div id="root">
+    <header>
+        <div class="logo">
+            <span>Ed</span>
+            <span>Shop</span>
+        </div>
+        <div class="accueil">
+            <a href="index.html" id="aller_vers_accueil">Revenir à la page d'accueil</a>
+        </div>
+        <div class="titre">
+            <h3>Tous les produits</h3>
+        </div>
+        <div class="icons">
+            <i class="fas fa-shopping-cart" id="panier"></i>
+            <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="search">
+            <form>
+                <div class="select">
+                    <select name="spec" id="spec">
+                        <option value="marque">Marque</option>
+                        <option value="prix">Prix</option>
+                        <option value="categorie">Categorie</option>
+                    </select>
+                </div>
+                <div class="searchbar">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" name="search" placeholder="recherche">
+                    <button id="reset"><i class="fa fa-times"></i></button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <main></main>
+</div>
+
+<script src="scripts/modal.js"></script>
+<script src="scripts/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+section > .head{
+    height: 50px;
+    width: 100%;
+}
+#root{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#logo{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Showcard Gothic";
+    font-size: 25px;
+}
+
+#logo span:nth-child(1){
+    color: #ffd900;
+}
+#logo span:nth-child(2){
+    color: #0f5f6b;
+}
+nav{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color:white;
+    height: 50px;
+    z-index: 10;
+}
+
+nav > ul {
+    height: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    padding-left: calc((100% - (30% + 620px))/3);
+    align-items: center;
+    background-color: white;
+    width: auto;
+
+}
+nav > ul > li{
+    display: flex;
+    margin: 0 20px;
+    height: 100%;
+    align-items: center;
+}
+nav > ul > li > a {
+    text-decoration: none;
+    color: #1b354d;
+    font-weight: bold;
+    align-items: center;
+    font-size: 15px;
+    height: 50%;
+}
+
+nav > ul > li > a:focus,  nav > ul > li > a:hover{
+    border-bottom :2px solid #1b354d;
+
+}
+nav > form{
+    display: flex;
+    align-items: center;
+    padding-right: calc((100% - (30% + 620px))/3);
+    position: relative;
+    right: 0 ;
+    height: 100%;
+    width: 25%;
+
+}
+nav>form>div{
+    position: relative;
+    display: flex;
+    height: 65%;
+    width: 100%;
+}
+nav > form>div> input, nav> form >div> button{
+    height: 100%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+nav > form>div> input{
+    padding:  0 calc(5% + 18px);
+    outline: none;
+    border: 0;
+    border: 1px solid #137C8B;
+    width: 100%;
+    border-radius: 50px;
+}
+nav > form>div>button{
+    position: absolute;
+    border: 0;
+    color: #137C8B;
+    background-color: transparent;
+    z-index: 10;
+    cursor: pointer;
+}
+nav > form>div>button[type="reset"]{
+    background-color: #137C8B;
+    color: white;
+    height: 16px;
+    width: 16px;
+    font-size: 11px;
+    border-radius: 50%;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+}
+nav > form>div>button[type="reset"]>i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bold   ;
+}
+
+
+nav > form>div>button[type="submit"]{
+    left: 3%;
+}
+.active{
+    border-bottom: 2px solid #1a7988;
+    color: #1a7988;
+}
+.shop{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.shop > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #137C8B;
+    height: 100%;
+    gap: 10px;
+    position: relative;
+}
+.shop > div> a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    gap: 10px;
+    transition: .3s;
+}
+.shop > div> a:hover{
+    background-color: #0f5f6b;
+}
+.shop > div > a> i{
+    font-size: 20px;
+}
+
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+main > section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 calc((100% - (30% + 620px))/3);
+
+}
+main>section:nth-child(1){
+    flex-direction: row;
+    padding: 0;
+}
+#accueil{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: white;
+}
+#accueil > .contenu, #accueil > .images{
+    height: 60%;
+    display: flex;
+}
+#accueil > .contenu{
+    width: 30%;
+    flex-direction: column;
+    text-align: justify;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+#accueil>.contenu>h1{
+    font-size: 45px;
+    letter-spacing: 2px;
+    text-align: left;
+    color: #0f5f6b;
+}
+#accueil>.contenu>p{
+    line-height: 25px;
+}
+#accueil>.contenu>a{
+    text-decoration: none;
+    background-color: #ffe13a;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .3s;
+}
+#accueil>.contenu>a:hover{
+    background-color: #f3cf03;
+    box-shadow: 0px 0px 10px #f3cf03;
+}
+#accueil>.images{
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+#accueil> .images > .img{
+    width: 200px;
+    height: 300px;
+    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.384);
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+.img:nth-child(1){
+    animation: image1 .5s linear forwards;
+    background-image: url("../images/clavier.jpg");
+}
+.img:nth-child(2){
+    animation: opacity .5s linear forwards;
+    background-image: url("../images/bass.jpg");
+}
+.img:nth-child(3){
+    animation: image2 .5s linear forwards;
+    background-image: url("../images/batterie.jpg");
+}
+@keyframes opacity {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@keyframes image1{
+    from{transform: translateY(0);opacity: 0;}
+    to{transform: translateY(15%);opacity: 1;}
+}
+@keyframes image2{
+    from{transform: translateY(0);opacity: 0;}
+    to{transform: translateY(-15%);opacity: 1;}
+}
+#nouveau>.contenu{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#nouveau>.contenu>h1{
+    width: 100%;
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: #0f5f6b;
+}
+.mini-modal{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #0f5f6b;
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+.mini-modal>button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#precedent{
+    left: 10%;
+}
+#suivant{
+    right: 10%;
+}
+
+
+#contact>.contenu{
+    flex: 1; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 50px;
+}
+#contact>.contenu>form{
+    background-color: #1b464d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#contact>.contenu>form>*{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+#contact>.contenu>form>h2{
+    font-size: 25px;
+    padding-left: 0;
+}
+#contact>.contenu>form>button{  
+    cursor: pointer;
+    background-color: #ffe13a;
+    transition: .3s;
+}
+#contact>.contenu>form>*::placeholder{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 17px;
+}
+
+#contact>.contenu>form>button:hover{
+    background-color: #f3cf03;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+}
+
+.infos>h2{
+    padding: 10px 0;
+    font-size: 25px;
+    color: #0f5f6b;
+}
+.infos> p{
+    text-align: justify;
+    line-height: 25px;
+    padding-right: 20px;
+}
+#coor_reseau{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+#coor_reseau h2{
+    color: #0f5f6b;
+    font-size: 25px;
+    padding: 10px 0;
+}
+#coor_reseau p{
+    line-height: 25px;
+}
+.coordonnees span, .coordonnees a{
+    margin-left: 10px;
+}
+.coordonnees a{
+    color: #0f5f6b;
+}
+.coordonnees i{
+    color: #ffd900;
+}
+
+.reseaux div {
+    color: #0f5f6b;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 25px;
+}
+.fa-copyright{
+    color: #0f5f6b;
+}
+.en_dev>.contenu{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.en_dev>.contenu>h1{
+    width: 100%;
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: #0f5f6b;
+    background-color: #d1d1d1;
+}
+.developpement{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #8c018f;
+}
+.developpement i{
+    font-size: 30px;
+
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="preload" href="./images/bass.jpg" as="image">
+    <link rel="preload" href="./images/clavier.jpg" as="image">
+    <link rel="preload" href="./images/batterie.jpg" as="image">
+    <title>Accueil</title>
+</head>
+<body>
+<div id="root">
+    <nav>
+        <div id="logo">
+            <span>ED</span>
+            <span>SHOP</span>
+        </div>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#nouveau">Nouveautés</a></li>
+            <li><a href="#apropos">A propos</a></li>
+            <li><a href="#marque">Marques</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="shop">
+            <div>
+                <a href="shop.html" id="aller_au_shop"><i class="fas fa-store"></i><span>Boutique</span></a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="accueil"> 
+            <div class="contenu">
+                <h1>Sonorisation Haut de Gamme</h1>
+                <p>Découvrez notre vaste sélection d'équipements de sonorisation de haute qualité. Trouvez tout ce dont vous avez besoin pour créer le son parfait</p>
+                <a href="shop.html">Explorez Nos Produits</a>
+            </div>
+            <div class="images">
+                <div class="img im1"></div>
+                <div class="img im2"></div>
+                <div class="img im3"></div>
+            </div>
+        </section>
+        <section id="nouveau" class="en_dev">
+            <div class="head"></div>
+            <div class="contenu">
+                <h1>Nouveautés</h1>
+                <div class="developpement">
+                    <h2>En cours de developpement</h2>
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
+            </div>
+        </section>
+        <section id="apropos" class="en_dev">
+            <div class="head"></div>
+            <div class="contenu">
+                <h1>A propos</h1>
+                <div class="developpement">
+                    <h2>En cours de developpement</h2>
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
+            </div>
+        </section>
+        <section id="marque" class="en_dev">
+            <div class="head"></div>
+            <div class="contenu">
+                <h1>Marques</h1>
+                <div class="developpement">
+                    <h2>En cours de developpement</h2>
+                    <i class="fa fa-spinner fa-spin"></i>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="head"></div>
+            <div class="contenu">
+                <div class="infos">
+                    <h2>Contactez-nous</h2>
+                    <p>Avez-vous des questions sur nos produits ou besoin d'assistance pour choisir le matériel de sonorisation parfait pour vos événements ? Notre équipe d'experts est là pour vous aider ! N'hesitez pas à nous contacter via notre formulaire en ligne, par téléphone ou par email. Nous nous engageons à répondre à toutes vos demandes dans les plus brefs délais afin de vous offrir une expérience d'achat exceptionnelle.</p>
+                    <div id="coor_reseau">
+                        <div class="coordonnees">
+                            <h2>Coordonnées</h2>
+                            <div>
+                                <p><i class="fas fa-map-marker-alt"></i><span>0910 A 296 Mahafaly Vatofotsy</span></p>
+                                <p><i class="fas fa-envelope"></i><a href="#">eddynicolas.h@gmail.com</a></p>
+                                <p><i class="fas fa-phone"></i><span>+261 34 36 181 02</span></p>
+                            </div>
+                        </div>
+                        <div class="reseaux">
+                            <h2>Suivez-nous</h2>
+                            <div>
+                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                        </div>
+                        <span><i class="fa fa-copyright"></i> 2024 politique de confidentialité</span>
+                    </div>
+                </div>
+                <form id="form_contact">
+                    <h2>Formulaire de contact</h2>
+                    <input type="text" name="nom" id="nom" placeholder="Votre nom">
+                    <input type="text" name="email" id="email" placeholder="Votre email">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Votre message ..."></textarea>
+                    <button type="submit">Nous faire parvenir</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

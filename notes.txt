@@ -1,0 +1,7 @@
+Palette de couleur  :
+
+#137C8B Sombre
+#709CA7 Claire
+#B8CBD0 Claire
+#7A90A4 Sombre
+#344D59 Sombre 
